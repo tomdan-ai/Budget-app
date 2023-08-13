@@ -37,3 +37,6 @@
 
 # Ignore Node Modules
 node_modules
+
+# Environment variables
+.env

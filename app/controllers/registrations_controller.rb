@@ -5,4 +5,8 @@ class RegistrationsController < Devise::RegistrationsController
       flash[:notice] = "Thank you for signing up! You've been redirected to the categories page."
       categories_path
     end
+
+    def sign_up_params
+      params.require(:user).permit(:full_name, :email, :password, :password_confirmation)
+    end
   end

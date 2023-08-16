@@ -9,6 +9,7 @@
         <span class="no-icon-placeholder">No icon available</span>
       <% end %>
       <h3><%= category.name %></h3>
+      <small><%= category.created_at.strftime('%d-%b-%Y') %>
       <p>Total Amount: <%= category.total_amount %></p>
       <%= link_to 'View Transactions', category_transactions_path(category) %>
     </div>

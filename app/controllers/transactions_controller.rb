@@ -30,7 +30,7 @@ class TransactionsController < ApplicationController
     end
     
     def transaction_params
-      params.require(:transaction).permit(:name, :amount, :category_id) # Permit category_ids as an array
+      params.require(:transaction).permit(:name, :amount, :category_ids ) # Permit category_ids as an array
     end
   end
   

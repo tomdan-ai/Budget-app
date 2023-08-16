@@ -1,0 +1,19 @@
+<!-- app/views/categories/new.html.erb -->
+
+<h2>Create a New Category</h2>
+
+<%= form_with(model: @category, url: categories_path, local: true) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :icon %>
+    <%= form.text_field :icon %>
+  </div>
+
+  <div>
+    <%= form.submit "Save" %>
+  </div>
+<% end %>

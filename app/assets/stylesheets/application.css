@@ -17,3 +17,10 @@
  /* app/assets/stylesheets/splash.css */
  
 
+
+
+ .big_div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ }

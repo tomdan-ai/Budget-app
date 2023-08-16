@@ -8,10 +8,13 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag 'splash', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <%= stylesheet_link_tag 'categories', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'transactions', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+      <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

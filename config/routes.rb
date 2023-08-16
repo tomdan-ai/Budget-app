@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'sessions',
+    registrations: 'registrations'
+  }
 
-  # Set the root route to the splash page
   root "pages#splash"
 
-  # Define other application routes as needed
+  resources :categories do
+    resources :transactions, only: [:index, :new, :create]
+  end
+  # Other application routes...
 
 end

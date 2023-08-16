@@ -1,0 +1,17 @@
+<!-- app/views/categories/index.html.erb -->
+
+<div class="big_div">
+  <% @categories.each do |category| %>
+    <div class="category">
+      <% if category.icon.present? %>
+        <%= image_tag category.icon %>
+      <% else %>
+        <span class="no-icon-placeholder">No icon available</span>
+      <% end %>
+      <h3><%= category.name %></h3>
+      <p>Total Amount: <%= category.total_amount %></p>
+      <%= link_to 'View Transactions', category_transactions_path(category) %>
+    </div>
+  <% end %>
+  <%= link_to 'Add a New Category', new_category_path %>
+</div>

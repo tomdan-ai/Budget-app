@@ -61,7 +61,7 @@ Discover the power of effective financial management with **SpendWise**, a cutti
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo]
+- [Live Demo](https://spendwise-spj5.onrender.com/)
 
 <!-- Presentation -->
 

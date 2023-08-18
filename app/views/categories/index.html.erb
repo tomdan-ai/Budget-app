@@ -1,18 +1,23 @@
 <!-- app/views/categories/index.html.erb -->
+<%= render partial: 'layouts/header' %>
 
 <div class="big_div">
   <% @categories.each do |category| %>
     <div class="category">
+    <div class='icon-div'>
       <% if category.icon.present? %>
-        <%= image_tag category.icon %>
-      <% else %>
-        <span class="no-icon-placeholder">No icon available</span>
-      <% end %>
-      <h3><%= category.name %></h3>
-      <small><%= category.created_at.strftime('%d-%b-%Y') %>
-      <p>Total Amount: <%= category.total_amount %></p>
-      <%= link_to 'View Transactions', category_transactions_path(category) %>
+  <%= image_tag category.icon %>
+<% else %>
+  <span class="no-icon-placeholder">No icon available</span>
+<% end %>
+    </div>
+    <div class="namount">
+    <h3><%= category.name %></h3>
+      <h3><%=link_to category.name, category_transactions_path(category) %></h3>
+      <div class="date"><%= category.created_at.strftime('%d-%b-%Y') %></div>
+    </div>
+      <p>$<%= category.total_amount %></p>
     </div>
   <% end %>
-  <%= link_to 'Add a New Category', new_category_path %>
+  <p class="cat-p"><%= link_to 'Add Category', new_category_path %></p>
 </div>

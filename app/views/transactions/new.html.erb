@@ -1,27 +1,25 @@
 <!-- app/views/transactions/new.html.erb -->
 
-<h2>Create a New Transaction</h2>
+<h2 class="trans-h2">Create a New Transaction</h2>
 
 <%= form_with(model: @transaction, url: category_transactions_path(@category), local: true) do |form| %>
-  <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="trans-name">
+    <%= form.text_field :name, placeholder: 'Transaction Name' %>
   </div>
 
-  <div>
-    <%= form.label :amount %>
-    <%= form.number_field :amount %>
+  <div class="trans-amt">
+    <%= form.number_field :amount, placeholder: 'Amount' %>
   </div>
 
-  <div>
-    <%= form.label :category_id %>
-    <%= form.collection_select :category_id, @categories, :id, :name %>
+  <div class="trans-cat">
+    <%= form.collection_select :category_id, @categories, :id, :name, placeholder: 'Select a Category' %>
   </div>
 
-  <div>
-    <%= form.submit "Save" %>
+  <div class="trans-sub">
+    <%= form.submit "Save Transaction" %>
   </div>
 <% end %>
+
 
 
 

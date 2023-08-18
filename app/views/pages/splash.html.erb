@@ -1,5 +1,4 @@
 <!--app/views/pages/splash.html.erb -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +9,10 @@
   <div class="container">
     <h1>Welcome to SpendWise Budget App</h1>
     <p>Manage your budget with ease!</p>
+    <div class="enter">
     <%= link_to 'Sign Up', new_user_registration_path %>
     <%= link_to 'Log In', new_user_session_path %>
+    </div>
   </div>
 </body>
 </html>

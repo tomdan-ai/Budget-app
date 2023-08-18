@@ -1,19 +1,17 @@
-<!-- app/views/categories/new.html.erb -->
+<%= render partial: 'layouts/header' %>
 
-<h2>Create a New Category</h2>
+<h2 class="cat-h2">Create a New Category</h2>
 
 <%= form_with(model: @category, url: categories_path, local: true) do |form| %>
-  <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="cat-name">
+    <%= form.text_field :name, placeholder: 'Category Name' %>
   </div>
 
-  <div>
-    <%= form.label :icon %>
-    <%= form.text_field :icon %>
+  <div class="cat-icon">
+    <%= form.text_field :icon, placeholder: 'Icon' %>
   </div>
 
-  <div>
-    <%= form.submit "Save" %>
+  <div class="cat-sub">
+    <%= form.submit "Save Category" %>
   </div>
 <% end %>

@@ -1,0 +1,18 @@
+<!--app/views/pages/splash.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SpendWise</title>
+  <%= stylesheet_link_tag 'splash', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to SpendWise Budget App</h1>
+    <p>Manage your budget with ease!</p>
+    <div class="enter">
+    <%= link_to 'Sign Up', new_user_registration_path, class: "sign-up-link" %>
+    <%= link_to 'Log In', new_user_session_path, class: "sign-in-link" %>
+    </div>
+  </div>
+</body>
+</html>

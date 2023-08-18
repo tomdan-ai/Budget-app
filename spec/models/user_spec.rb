@@ -1,19 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  it "is not valid without a name" do
-    user = User.new(email: 'van@gmail.com', password: '123456', password_confirmation: '123456')
+  it 'is not valid without a full name' do
+    user = User.new(email: 'test@example.com', password: 'password', password_confirmation: 'password')
     expect(user).to_not be_valid
   end
 
-  it "is not valid without an email" do
-    user = User.new(name: 'van', password: '123456', password_confirmation: '123456')
+  it 'is not valid without an email address' do
+    user = User.new(full_name: 'Test User', password: 'password', password_confirmation: 'password')
     expect(user).to_not be_valid
   end
 
-  it "is not valid with a duplicate email" do
-    User.create!(name: 'van', email: 'van@gmail.com', password: '123456', password_confirmation: '123456')
-    user = User.new(name: 'john', email: 'van@gmail.com', password: '123456', password_confirmation: '123456')
+  it 'is not valid with a duplicate email address' do
+    User.create!(full_name: 'User 1', email: 'test@example.com', password: 'password',
+                 password_confirmation: 'password')
+    user = User.new(full_name: 'User 2', email: 'test@example.com', password: 'password',
+                    password_confirmation: 'password')
     expect(user).to_not be_valid
   end
 end

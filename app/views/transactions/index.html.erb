@@ -1,7 +1,7 @@
 <!-- app/views/transactions/index.html.erb -->
 <div class="t-head">
 <h2>Transactions for <%= @category.name %></h2>
-<p class="bck"><%= link_to raw('&#8592;'), categories_path %></p>
+<p class="bck"><%= link_to raw('&#8592;'), categories_path, class: "bck-link" %></p>
 </div>
 <p>Total Amount: $<%= @category.total_amount %></p>
 <% @transactions.each do |transaction| %>

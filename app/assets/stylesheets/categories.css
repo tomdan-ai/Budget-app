@@ -1,15 +1,15 @@
 /* app/assets/stylesheets/categories.css */
 
 .category {
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    display: inline-block;
-    vertical-align: top;
-    width: calc(33.33% - 40px);
-    text-align: center;
-    background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  width: 97%;
+  gap: 18%;
+  padding: 21px;
+  height: 100px;
   }
   
   .category h3 {
@@ -27,16 +27,63 @@
   
   .category a {
     display: block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
+    color: #434b54;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    background-color: #fff;
   }
   
   .category a:hover {
-    background-color: #0056b3;
+    color: #0056b3;
+    font-family: cursive;
   }
   
+  .date {
+    font-size: 10px;
+  }
+
+  .icon-div {
+    width: 145px;
+    height: 100px;
+  }
+
+  .cat-p {
+    text-align: center;
+  }
+  .cat-p a {
+    background-color: #5fb523;
+    width: 92%;
+  }
+
+  .namount {
+    margin-left: -17%;
+    margin-top: -17px;
+  }
+
+  
+  .cat-name input {
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+  }
+  .cat-icon input {
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+  }
+
+  .cat-h2 {
+    color: #434b54;
+  }
+
+  .cat-sub input {
+    width: 100%;
+    margin-top: 30%;
+    height: 30px;
+    background-color:#5fb523;
+    color: #fff;
+    border: 1px solid;
+  }
